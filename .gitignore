@@ -24,6 +24,8 @@ bin/
 
 ### VS Code ###
 .vscode/
+.idea
+leetcode.iml
 
 ### Mac OS ###
 .DS_Store
