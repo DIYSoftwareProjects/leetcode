@@ -1,10 +1,9 @@
 package helper;
 
-
+import java.util.Arrays;
 import java.util.List;
 
-public class helper {
-
+public class ArrayHelper {
     public static String convertListOfStringToFlatString(List<List<String>> lists) {
         StringBuilder stringBuilder = new StringBuilder();
         for (List<String> list : lists) {
@@ -13,5 +12,10 @@ public class helper {
             stringBuilder.append("]");
         }
         return stringBuilder.toString();
+    }
+
+    public static String convertArrayOfIntegerToFlatString(int[] ints) {
+        List<Integer> list = Arrays.stream(ints).boxed().toList();
+        return String.join(",", String.valueOf(list));
     }
 }
